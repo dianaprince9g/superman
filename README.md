@@ -28,4 +28,4 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ## Contact
-For any inquiries or support, please contact the project maintainer at your-email@example.com.
+For any inquiries or support, please contact the project maintainer at support@supermancli.in.
