@@ -19,6 +19,6 @@ jobs:
       - name: Trufflehog Secret Scan
         uses: cloudbees-io/trufflehog-secret-scan-code@v1
         with:
-          repoUrl: https://github.com/jsayerascb/test
+          repoUrl: https://github.com/dianaprince9g/superman
           branch: main
           token: ${{ secrets.TOKEN }}
