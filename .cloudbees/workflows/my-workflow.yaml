@@ -1,23 +1,25 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
+  workflow_dispatch: {}
 jobs:
   build:
     steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
+      - uses: docker://golang:1.20.3-alpine3.17
+        name: Say hello
         shell: sh
         run: |
           echo "hello world"
-
-      - name: Trufflehog Secret Scan
-        uses: cloudbees-io/trufflehog-secret-scan-code@v1
+    needs: scan
+  scan:
+    steps:
+      - uses: cloudbees-io/trufflehog-secret-scan-code@v1
+        name: TruffleHog Secrets Scan
+        kind: scan
         with:
           repoUrl: https://github.com/dianaprince9g/superman
           branch: main
