@@ -15,3 +15,10 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
+
+      - name: Trufflehog Secret Scan
+        uses: cloudbees-io/trufflehog-secret-scan-code@v1
+        with:
+          repoUrl: https://github.com/jsayerascb/test
+          branch: main
+          token: ${{ secrets.TOKEN }}
