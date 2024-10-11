@@ -1,12 +1,10 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-
 on:
   push:
     branches:
-      - '**'
-
+      - "**"
 jobs:
   build:
     steps:
@@ -29,3 +27,11 @@ jobs:
         with:
           test-type: jest
           folder-name: ${{ cloudbees.workspace }}/failed-jest-results.json
+  test:
+    steps:
+      - uses: cloudbees-io/publish-test-results@v1
+        name: Publish Jest Test Results
+        kind: test
+        with:
+          test-type: JEST
+          folder-name: passed-test-results.json
