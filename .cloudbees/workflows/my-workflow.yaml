@@ -34,4 +34,4 @@ jobs:
         kind: test
         with:
           test-type: JEST
-          folder-name: passed-test-results.json
+          folder-name: ${{ cloudbees.workspace }}/passed-jest-results.json
