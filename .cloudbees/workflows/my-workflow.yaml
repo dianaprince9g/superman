@@ -13,25 +13,13 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-      - name: Checkout Repository
-        uses: cloudbees-io/checkout@v1
-      - name: Publish Passed Jest Test Results Only
-        if: ${{always()}}
-        uses: cloudbees-io/publish-test-results@v1
-        with:
-          test-type: jest
-          folder-name: ${{ cloudbees.workspace }}/passed-jest-results.json
-      - name: Publish Passed And Failed Jest Test Results
-        if: ${{always()}}
-        uses: cloudbees-io/publish-test-results@v1
-        with:
-          test-type: jest
-          folder-name: ${{ cloudbees.workspace }}/failed-jest-results.json
   test:
     steps:
-      - uses: cloudbees-io/publish-test-results@v1
-        name: Publish Jest Test Results
+      - name: Checkout Repository
+        uses: cloudbees-io/checkout@v1
+      - name: Publish Jest Test Results
+        uses: cloudbees-io/publish-test-results@v1
         kind: test
         with:
           test-type: JEST
-          folder-name: ${{ cloudbees.workspace }}/passed-jest-results.json
+          folder-name: ${{ cloudbees.workspace }}/failed-jest-results.json
