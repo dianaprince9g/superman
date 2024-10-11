@@ -1,0 +1,523 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for nextgen-ui/libs/shared-patterns/src/DashboardFilter/DashboardFilterWidget/DashboardFilterSummaryWidget/Plugins/PluginIcon.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../../../../../index.html">All files</a> / <a href="index.html">nextgen-ui/libs/shared-patterns/src/DashboardFilter/DashboardFilterWidget/DashboardFilterSummaryWidget/Plugins</a> PluginIcon.tsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>146/146</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">16.66% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>1/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>146/146</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useTheme } from '@mui/material/styles'
+&nbsp;
+import { DEFAULT_PLUGIN_TOOL } from '../constants'
+&nbsp;
+import anchore_svg from './plugins/anchore.svg'
+import aquasec_svg from './plugins/aquasec.svg'
+import aws_svg from './plugins/aws.svg'
+import bitbucket_svg from './plugins/bitbucket.svg'
+import blackduck_svg from './plugins/blackduck.svg'
+import checkmarx_svg from './plugins/checkmarx.svg'
+import checkov_svg from './plugins/checkov.svg'
+import cloud_custodian_svg from './plugins/cloud-custodian.svg'
+import cloudbees_svg from './plugins/cloudbees.svg'
+import coverity_svg from './plugins/coverity.svg'
+import coverity_polaris_svg from './plugins/coverity-polaris.svg'
+import dependency_check_svg from './plugins/dependency-check.svg'
+import dependency_track_svg from './plugins/dependency-track.svg'
+import docker_svg from './plugins/docker.svg'
+import falco_svg from './plugins/falco.svg'
+import findsec_bugs_svg from './plugins/findsec-bugs.svg'
+import github_svg from './plugins/github.svg'
+import gitlab_svg from './plugins/gitlab.svg'
+import gitleaks_svg from './plugins/gitleaks.svg'
+import gosec_svg from './plugins/gosec.svg'
+import grype_svg from './plugins/grype.svg'
+import harbour_svg from './plugins/harbour.svg'
+import invicti_svg from './plugins/invicti.svg'
+import jenkins_svg from './plugins/jenkins.svg'
+import jfrog_artifactory_svg from './plugins/jfrog-artifactory.svg'
+import jfrog_xray_svg from './plugins/jfrog-xray.svg'
+import jira_svg from './plugins/jira.svg'
+import kubernetes_svg from './plugins/kubernetes.svg'
+import mend_svg from './plugins/mend.svg'
+import nessus_svg from './plugins/nessus.svg'
+import nexus_iq_svg from './plugins/nexus-iq.svg'
+import njs_scan_svg from './plugins/njs-scan.svg'
+import scc_svg from './plugins/scc.svg'
+import servicenow_svg from './plugins/servicenow.svg'
+import snyk_svg from './plugins/snyk.svg'
+import sonarqube_svg from './plugins/sonarqube.svg'
+import stackhawk_svg from './plugins/stackhawk.svg'
+import syft_svg from './plugins/syft.svg'
+import trivy_svg from './plugins/trivy.svg'
+import veracode_svg from './plugins/veracode.svg'
+import zap_svg from './plugins/zap.svg'
+&nbsp;
+export type PluginIconProps = {
+  name: string
+  size?: number
+  className?: string
+}
+&nbsp;
+export const PluginIcon = ({ name, className, size = <span class="branch-0 cbranch-no" title="branch not covered" >18, ...o</span>thers }: PluginIconProps) =&gt; {
+  const imageSource = <span class="branch-0 cbranch-no" title="branch not covered" >pluginImageMappings[name] ?? DEFAULT_PLUGIN_TOOL</span>
+  const isInverted = invertedDarkModeImages.indexOf(name) !== -1
+  const theme = useTheme()
+&nbsp;
+  return (
+    &lt;img
+      className={className}
+      style={{ filter: <span class="branch-0 cbranch-no" title="branch not covered" >isInverted &amp;&amp; theme.palette.mode === <span class="branch-0 cbranch-no" title="branch not covered" >'dark' ? '</span>invert(1)' : '</span>' }}
+      alt={<span class="branch-0 cbranch-no" title="branch not covered" >name ?? 'Plugin Logo'}</span>
+      width={size}
+      height={size}
+      {...others}
+      src={imageSource}
+    /&gt;
+  )
+}
+&nbsp;
+export const pluginImageMappings: Record&lt;string, string&gt; = {
+  'b806d6fd-ba21-11eb-9cab-0a58a9feac02': scc_svg,
+  '3a05fb03-5fd6-4e25-b551-9578966cb979': zap_svg,
+  '3a5c1888-db51-11ec-b05f-3e7a4cd304b0': jfrog_xray_svg,
+  '4e779315-9de7-4fd1-a704-e10ff8533eba': veracode_svg,
+  '79e0de74-c0ac-11ec-9e18-3ee23e122ae0': veracode_svg,
+  'eb7894f7-7ce5-4e7f-8dab-d4ae30efc006': veracode_svg,
+  '9c242178-b1ae-11eb-b5dd-0a58a9feac02': trivy_svg,
+  'adccc492-fa88-48fd-b761-36ca6345b722': cloudbees_svg,
+  '13bcdcae-23dc-4099-ba0b-690f6dbe6c08': cloudbees_svg,
+  '0f01c197-369e-4df8-b4bc-c6233908d97c': falco_svg,
+  'b04ed6b9-73ab-43f4-b128-0573a457bd91': syft_svg,
+  '8dd75bfd-9ae7-460f-94d3-6ba3a5b35b59': stackhawk_svg,
+  'dc66e359-b017-11ec-b3e9-5e90eda3170c': sonarqube_svg,
+  '2f0b9c26-ba4a-11ec-bf22-a2b1e97f1227': snyk_svg,
+  '2fd548c9-b9a7-11ec-bf22-a2b1e97f1227': snyk_svg,
+  'ec7ccdd7-d1db-11ec-a8dc-1a46c8d77a12': snyk_svg,
+  'd5b96d13-d763-11ec-b05f-3e7a4cd304b0': snyk_svg,
+  'dcf463b7-e176-4523-84ae-6c6a8bcf4ba7': servicenow_svg,
+  'ps19e330-8827-11eb-8dcd-0242ac130003': cloudbees_svg,
+  'c5f8697d-783e-453b-b515-519f8933c98f': nexus_iq_svg,
+  '70c24746-e6c1-46c9-b3dc-e1eb7b1fb717': nexus_iq_svg,
+  '06b4ad78-d549-40e9-bd7b-3fc230b5a3ba': nexus_iq_svg,
+  'cf4f555c-ef19-48e0-bd73-07ad4ea8985e': invicti_svg,
+  '0c0ad3b0-04bb-4bb7-a325-1476cabd4198': nessus_svg,
+  'a88556b2-6606-4f75-a11c-c6f713e91986': mend_svg,
+  '071fbf1d-36d3-4d39-bdb1-44c36a8888b8': mend_svg,
+  '47debd6b-4dfd-11ec-8ccc-0a58a9feac02': kubernetes_svg,
+  'fa05c793-75de-4ce7-8d50-9a38ab12ad3e': jira_svg,
+  '98723e0e-d82b-11ec-b05f-3e7a4cd304b0': jfrog_artifactory_svg,
+  '524bf8d1-65bc-497c-8356-34fd63b96afd': jenkins_svg,
+  'd18e467f-d926-419c-80b1-baaeb3853509': jenkins_svg,
+  '07fb3afa-2a33-4541-a0b8-a9c6cf645b5c': harbour_svg,
+  '407bee1d-bcc7-436d-8159-6cc5dff96f27': grype_svg,
+  '90670c74-86a4-447c-ad78-3146e2e267bc': gitlab_svg,
+  'bb18c5bc-0f74-42f5-9c2e-2b3ffc19bd60': github_svg,
+  'aec75fd4-aa50-416d-8cb2-967ead6bb2dd': github_svg,
+  'bb4e4855-4932-4ca0-9b2e-cfc36c8d405e': github_svg,
+  '92f71e88-05ca-4572-a5c5-1100d3a7c1cf': findsec_bugs_svg,
+  '3375a3e0-c043-4c77-86e7-6d22ca0b766b': docker_svg,
+  '249857c3-52fa-4ba0-9dce-9a68af0e93b3': docker_svg,
+  'c90abb4b-34fb-40bf-88dc-50b59168fc51': dependency_track_svg,
+  '7f2a6de3-4cd3-4e93-8662-91a98b0bb51b': coverity_svg,
+  '9ddd3e16-f832-47d0-8cdd-e1d83965ddb1': coverity_polaris_svg,
+  'p754ec1b8-9148-11eb-a8b3-0242ac130003': cloudbees_svg,
+  '8ffce2e4-2641-4da9-83e7-beda4cf7fcbc': cloud_custodian_svg,
+  'bbcd99d9-bf31-4b5c-973d-0b8bde12575d': checkov_svg,
+  'd66cd59c-ba51-11ec-bf22-a2b1e97f1227': checkmarx_svg,
+  '368971c2-324a-4793-94d5-2ad56e46fc1a': cloudbees_svg,
+  'dd9e095b-e6e6-40ec-bb9c-24238b878900': blackduck_svg,
+  '5907093b-c58d-11ec-80a0-0a58a9feac02': bitbucket_svg,
+  'cfebe968-7941-43e3-9ecb-cdd22dce791b': aws_svg,
+  'ba8b85de-e977-4bb6-9b2f-590c4e440486': aws_svg,
+  'd3c69b81-7a72-4d5f-ad36-af16a5a28769': aws_svg,
+  '854ec1b8-9148-51eb-a8b3-0242ac130004': cloudbees_svg,
+  'ccb18f96-45d3-430d-b045-926be86fbeec': aquasec_svg,
+  '8a300061-30f0-4cf6-ba79-33ee2f1c6151': anchore_svg,
+  '893e19d1-ba4a-11eb-9cab-0a58a9feac02': njs_scan_svg,
+  '86591520-ba4a-11eb-9cab-0a58a9feac02': gosec_svg,
+  'c7a0a399-c2e9-11eb-9cab-0a58a9feac02': gitleaks_svg,
+  '05c2c4e7-c2df-11eb-9cab-0a58a9feac02': dependency_check_svg,
+  '95381959-a0fc-4278-9e66-82816f1d80bc': findsec_bugs_svg,
+  '89b605d4-c58d-11ec-80a0-0a58a9feac02': sonarqube_svg,
+}
+&nbsp;
+const invertedDarkModeImages: Array&lt;string&gt; = [
+  'b806d6fd-ba21-11eb-9cab-0a58a9feac02',
+  'bb18c5bc-0f74-42f5-9c2e-2b3ffc19bd60',
+  'aec75fd4-aa50-416d-8cb2-967ead6bb2dd',
+  'bb4e4855-4932-4ca0-9b2e-cfc36c8d405e',
+  '92f71e88-05ca-4572-a5c5-1100d3a7c1cf',
+  '7f2a6de3-4cd3-4e93-8662-91a98b0bb51b',
+  'dd9e095b-e6e6-40ec-bb9c-24238b878900',
+  'c7a0a399-c2e9-11eb-9cab-0a58a9feac02',
+  '95381959-a0fc-4278-9e66-82816f1d80bc',
+]
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-10-11T03:15:12.875Z
+            </div>
+        <script src="../../../../../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../../../../../sorter.js"></script>
+        <script src="../../../../../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

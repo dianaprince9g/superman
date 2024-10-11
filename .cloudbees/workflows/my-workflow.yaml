@@ -22,4 +22,4 @@ jobs:
         kind: test
         with:
           test-type: JEST
-          folder-name: ${{ cloudbees.workspace }}/failed-jest-results.json
+          folder-name: ${{ cloudbees.workspace }}/coverage/*/*/jest-results.json
