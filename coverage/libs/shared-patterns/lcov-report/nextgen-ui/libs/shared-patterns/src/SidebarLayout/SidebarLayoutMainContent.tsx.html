@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.09% </span>
+                <span class="strong">85.91% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>59/71</span>
+                <span class='fraction'>61/71</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/5</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.09% </span>
+                <span class="strong">85.91% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>59/71</span>
+                <span class='fraction'>61/71</span>
             </div>
         
             
@@ -158,18 +158,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -180,19 +168,31 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -228,9 +228,9 @@ const Main = styled('main', {
   }),
   marginLeft: `-${drawerWidth}px`,
   marginBottom: 0,
-  ...(!<span class="branch-0 cbranch-no" title="branch not covered" >fullWidth &amp;&amp; {</span>
-<span class="cstat-no" title="statement not covered" >    paddingBottom: 80,</span>
-<span class="cstat-no" title="statement not covered" >  }),</span>
+  ...(!fullWidth &amp;&amp; {
+    paddingBottom: 80,
+  }),
   minHeight: '100vh', // This ensures background color is applied for entire main layout
   ...(open &amp;&amp; {
     transition: theme.transitions.create('margin', {
@@ -244,14 +244,14 @@ const Main = styled('main', {
 /**
  * SidebarLayoutMainContent holds the main content for any page.
  */
-export const SidebarLayoutMainContent = ({ children, fullWidth = <span class="branch-0 cbranch-no" title="branch not covered" >true }: LayoutWrapperProps) =&gt; {</span>
+export const SidebarLayoutMainContent = ({ children, fullWidth = true }: LayoutWrapperProps) =&gt; {
   const layoutContext = useContext(LayoutContext)
 &nbsp;
   return (
     &lt;Main open={layoutContext.isDrawerOpen} fullWidth={fullWidth}&gt;
       &lt;Box
         sx={{
-          maxWidth: fullWidth ? <span class="branch-0 cbranch-no" title="branch not covered" >'none' : '1440px',</span>
+          maxWidth: fullWidth ? 'none' : '1440px',
           margin: 'auto',
           display: 'flex',
           flexDirection: 'column',
@@ -283,7 +283,7 @@ export const SidebarLayoutPadded = <span class="fstat-no" title="function not co
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-10-11T03:15:12.751Z
+                at 2024-10-11T04:55:34.647Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.12% </span>
+                <span class="strong">12.76% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/132</span>
+                <span class='fraction'>18/141</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.12% </span>
+                <span class="strong">12.76% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/132</span>
+                <span class='fraction'>18/141</span>
             </div>
         
             
@@ -195,7 +195,16 @@
 <a name='L130'></a><a href='#L130'>130</a>
 <a name='L131'></a><a href='#L131'>131</a>
 <a name='L132'></a><a href='#L132'>132</a>
-<a name='L133'></a><a href='#L133'>133</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -211,6 +220,15 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -334,12 +352,14 @@ import { useTheme } from '@mui/material/styles'
 &nbsp;
 import { Overflow } from '@cloudbees/shared-components/OverflowMenu'
 import { TruncableTypography } from '@cloudbees/shared-components/TruncableTypography'
+import { useColorMode } from '@cloudbees/shared-theme/UIProvider'
 &nbsp;
 import { useGraphActions } from '../../hooks/useGraphActions'
 import { NODE_HEIGHT, ZOOM_BREAKPOINT } from '../constants'
 import type { IJobNode } from '../types'
 &nbsp;
-import { useHandleStyles } from './useHandleStyles'
+import handledark from './icons/handledark.svg'
+import handlelight from './icons/handlelight.svg'
 import { useNodeStyles } from './useNodeStyles'
 &nbsp;
 export const ManualApprovalNode = <span class="fstat-no" title="function not covered" >(node: NodeProps&lt;IJobNode&gt;) =&gt; {</span>
@@ -348,6 +368,7 @@ export const ManualApprovalNode = <span class="fstat-no" title="function not cov
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  const { customComponents, palette } = useTheme()</span>
 <span class="cstat-no" title="statement not covered" >  const nodeColor = customComponents.Graph.manualApproval.borderColor</span>
+<span class="cstat-no" title="statement not covered" >  const { mode } = useColorMode()</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  const zoomSelector = (s: ReactFlowState) =&gt; s.transform[2] &gt;= ZOOM_BREAKPOINT</span>
 <span class="cstat-no" title="statement not covered" >  const showSteps = useStore(zoomSelector)</span>
@@ -358,7 +379,13 @@ export const ManualApprovalNode = <span class="fstat-no" title="function not cov
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  const height = showSteps &amp;&amp; node ? node.data.height : NODE_HEIGHT</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  const handleStyle = useHandleStyles()</span>
+<span class="cstat-no" title="statement not covered" >  const handleStyle = {</span>
+<span class="cstat-no" title="statement not covered" >    height: 8,</span>
+<span class="cstat-no" title="statement not covered" >    width: 8,</span>
+<span class="cstat-no" title="statement not covered" >    backgroundSize: 'cover',</span>
+<span class="cstat-no" title="statement not covered" >    backgroundImage: mode === 'light' ? `url("${handlelight}")` : `url("${handledark}")`,</span>
+<span class="cstat-no" title="statement not covered" >    border: '0px',</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
 <span class="cstat-no" title="statement not covered" >    &lt;Box height={height} sx={{ transition: 'height 500ms ease-in-out' }}&gt;</span>
@@ -466,7 +493,7 @@ export const ManualApprovalNode = <span class="fstat-no" title="function not cov
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-10-11T03:17:42.060Z
+                at 2024-10-11T04:58:05.339Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
