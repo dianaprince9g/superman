@@ -13,7 +13,7 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-          echo "hello my name"
+          echo "hello cloudbees"
   test:
     steps:
       - name: Checkout Repository
