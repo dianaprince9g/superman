@@ -14,9 +14,17 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-          echo "${{ cloudbees.run_id }}"
-          echo "${{ cloudbees.resource_id }}"
-          echo "Current Run Number: $BUILD_NUMBER"
+          echo "api: ${{ cloudbees.api }}"
+          echo "event: ${{ cloudbees.event }}"
+          echo "event_name: ${{ cloudbees.event_name }}"
+          echo "home: ${{ cloudbees.home }}"
+          echo "registries: ${{ cloudbees.registries }}"
+          echo "run_attempt: ${{ cloudbees.run_attempt }}"
+          echo "run_id: ${{ cloudbees.run_id }}"
+          echo "scm: ${{ cloudbees.scm }}"
+          echo "version: ${{ cloudbees.version }}"
+          echo "workspace: ${{ cloudbees.workspace }}"
+          echo "Current Run Number: ${{ BUILD_NUMBER }}"
     needs: scan
   scan:
     steps:
