@@ -44,7 +44,7 @@ jobs:
           echo "SCM Token: ${cloudbees.scm.token}"
           echo "version: ${{ cloudbees.version }}"
           echo "workspace: ${{ cloudbees.workspace }}"
-          echo "Current Run Number: ${{ job }}"
+          echo "Job ID: ${{ job.id }}"
     needs: scan
   scan:
     steps:
