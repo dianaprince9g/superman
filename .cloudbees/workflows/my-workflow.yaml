@@ -16,6 +16,9 @@ jobs:
           echo "hello world"
           echo "api.url: ${{ cloudbees.api.url }}"
           echo "home: ${{ cloudbees.home }}"
+          echo "Job ID: ${{ job.id }}"
+          echo "run_id: ${{ cloudbees.run_id }}"
+          echo "Event Sender: ${cloudbees.event.sender}"
     needs: scan
   scan:
     steps:
