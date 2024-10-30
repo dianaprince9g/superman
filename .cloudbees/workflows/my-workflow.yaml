@@ -15,7 +15,6 @@ jobs:
         run: |
           echo "hello world"
           echo "api.url: ${{ cloudbees.api.url }}"
-          echo "api.token: ${{ cloudbees.api.token }}"
           echo "Event After: ${cloudbees.event.after}"
           echo "Event Base Ref: ${cloudbees.event.base_ref}"
           echo "Event Before: ${cloudbees.event.before}"
