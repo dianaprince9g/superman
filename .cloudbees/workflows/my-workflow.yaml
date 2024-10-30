@@ -14,7 +14,8 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-          echo "api: ${{ cloudbees.api }}"
+          echo "api: ${{ cloudbees.api.url }}"
+          echo "api: ${{ cloudbees.api.token }}"
           echo "event: ${{ cloudbees.event }}"
           echo "event_name: ${{ cloudbees.event_name }}"
           echo "home: ${{ cloudbees.home }}"
