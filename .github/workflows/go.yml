@@ -26,4 +26,6 @@ jobs:
 
     - name: Test
       run: go test -v ./... | tee ./test.log
-      run: cat ./test.log | go-junit-report >./test.xml
+
+    - name: Generate Test Report
+      run: cat ./test.log | go-junit-report > ./test.xml
