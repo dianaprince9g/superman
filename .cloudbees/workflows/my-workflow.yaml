@@ -38,3 +38,8 @@ jobs:
           test-type: Junit
           test-result-location: test.xml
           branch-name: main
+      - name: Publish Test Results
+        uses: cloudbees-io/publish-test-results@v1
+        with:
+          folder-name: ${{ cloudbees.workspace }}/test.xml
+          test-type: go
