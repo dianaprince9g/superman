@@ -36,5 +36,5 @@ jobs:
           repo-name: superman
           workflow-name: 'Go'
           test-type: Junit
-          test-result-location: test.xml
+          test-result-location: junit-service*
           branch-name: main
