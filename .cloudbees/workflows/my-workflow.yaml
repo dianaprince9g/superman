@@ -34,5 +34,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           org-name: dianaprince9g
           repo-name: superman
-          workflow-name: 'Build_Test_Deploy'
+          workflow-name: 'Go'
+          test-type: Go
+          test-result-location: test.xml
           branch-name: main
