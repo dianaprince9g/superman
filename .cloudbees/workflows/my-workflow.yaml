@@ -24,3 +24,16 @@ jobs:
           repoUrl: https://github.com/dianaprince9g/superman
           branch: main
           token: ${{ secrets.TOKEN }}
+  test:
+    steps:
+      - name: Trigger Github job using Cloudbees Github Action -  test
+        uses: cloudbees-io/ghactions-run-workflow@v2
+        kind: build
+        with:
+          url: https://api.github.com/
+          token: ${{ secrets.TOKEN }}
+          org-name: dianaprince9g
+          repo-name: superman
+          workflow-name: 'Build_Test_Deploy'
+          parameters: '{"param1":"this is with space"}'
+          branch-name: main
