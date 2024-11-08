@@ -35,5 +35,5 @@ jobs:
           org-name: dianaprince9g
           repo-name: superman
           workflow-name: 'Build_Test_Deploy'
-          parameters: '{"param1":"this is with space"}'
+          parameters: '{"param1":"this is with spaces"}'
           branch-name: main
