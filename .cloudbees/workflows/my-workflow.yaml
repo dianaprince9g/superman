@@ -13,7 +13,7 @@ jobs:
         name: Say hello
         shell: sh
         run: |
-          echo "hello worlds"
+          echo "hello world"
     needs: scan
   scan:
     steps:
