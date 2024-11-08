@@ -35,6 +35,6 @@ jobs:
           org-name: dianaprince9g
           repo-name: superman
           workflow-name: 'Go'
-          test-type: Go
+          test-type: Junit
           test-result-location: test.xml
           branch-name: main
