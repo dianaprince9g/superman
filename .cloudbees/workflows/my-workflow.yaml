@@ -22,4 +22,3 @@ jobs:
           token: ${{ secrets.JENKINS_PASSWORD }}
           url: ${{ vars.JENKINS_URL }}
           job-name: my-platform-job
-          parameters: '{"ENV_NAME":"TEST"}'
