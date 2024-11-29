@@ -15,11 +15,11 @@ jobs:
           echo "hello world"
   test:
     steps:
-      - name: Checkout Repository
-        uses: cloudbees-io/checkout@v1
-      - name: Publish Jest Test Results
-        uses: cloudbees-io/publish-test-results@v1
-        kind: test
+      - name: Run Jenkins job
+        uses: cloudbees-io/jenkins-run-job@v2
         with:
-          test-type: JEST
-          folder-name: ${{ cloudbees.workspace }}/coverage/*/*/jest-results.json
+          username: ${{ secrets.JENKINS_USERNAME }}
+          token: ${{ secrets.JENKINS_PASSWORD }}
+          url: ${{ vars.JENKINS_URL }}
+          job-name: my-platform-job
+          parameters: '{"ENV_NAME":"TEST"}'
