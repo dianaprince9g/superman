@@ -1,0 +1,40 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: My workflow
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    steps:
+      - name: Print Hello World Every 30 Seconds
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          #!/bin/sh
+          start_time=$(date +%s)
+
+          # Set total duration to 3 minutes (180 seconds) as an example
+          total_duration=180
+          elapsed=0
+
+          echo "Starting Hello World Timer"
+
+          # Loop until total duration is reached
+          while [ $elapsed -lt $total_duration ]; do
+            current_time=$(date +%s)
+            elapsed=$((current_time - start_time))
+
+            # Convert time elapsed to minutes and seconds
+            elapsed_minutes=$((elapsed / 60))
+            elapsed_seconds=$((elapsed % 60))
+
+            echo "Hello World - Time elapsed: ${elapsed_minutes} minutes and ${elapsed_seconds} seconds"
+
+            sleep 30
+          done
+
+          echo "Hello World Timer Completed!"
